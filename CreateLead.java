@@ -59,11 +59,12 @@ public class CreateLead
 		Select dropdown4 = new Select(ownership);
 		dropdown4.selectByValue("OWN_PUBLIC_CORP");
 		
-		
-		//Contact Information
 		driver.findElement(By.id("createLeadForm_sicCode")).sendKeys("2431");
+		driver.findElement(By.id("createLeadForm_tickerSymbol")).sendKeys("7207");
 		driver.findElement(By.id("createLeadForm_description")).sendKeys("A Simple Program to show about selenium");
 		driver.findElement(By.id("createLeadForm_importantNote")).sendKeys("Understand, Learn, Practice, Learn again");
+		
+		//Contact Information
 		driver.findElement(By.id("createLeadForm_primaryPhoneCountryCode")).clear();
 		driver.findElement(By.id("createLeadForm_primaryPhoneCountryCode")).sendKeys("+91");
 		driver.findElement(By.id("createLeadForm_primaryPhoneAreaCode")).sendKeys("04326");
@@ -95,7 +96,6 @@ public class CreateLead
 		System.out.println("First name is "+driver.findElement(By.id("createLeadForm_firstName")).getAttribute("value"));
 		driver.findElement(By.className("smallSubmit")).click();
 		System.out.println("Titile of the page is "+driver.getTitle());
-		driver.close();
 
 	}
 

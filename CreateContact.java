@@ -21,9 +21,9 @@ public class CreateContact
 		driver.findElement(By.linkText("Create Contact")).click();
 		driver.findElement(By.id("firstNameField")).sendKeys("Manivel");
 		driver.findElement(By.id("lastNameField")).sendKeys("Ramar");
-		System.out.println("First name is "+driver.findElement(By.id("firstNameField")).getAttribute("value"));
-		System.out.println("Titile of the page is "+driver.getTitle());
 		driver.findElement(By.className("smallSubmit")).click();
+		System.out.println("Title is "+driver.getTitle());
+		System.out.println("First Name is "+driver.findElement(By.id("viewContact_firstName_sp")).getText());
 		driver.close();
 		
 	}
